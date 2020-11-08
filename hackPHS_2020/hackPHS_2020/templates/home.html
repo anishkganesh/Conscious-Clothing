@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action=""> <!-- action posts the information onto the same route we are currently on -->
+            {{ form.hidden_tag() }} <!-- adding a CSRF (cross site request forgery) token to protect our form against certain attacks -->
+            <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Current Clothing Link</legend>
+                        <div class="form-group">
+                            <p style="font-size: 1.2rem; margin-bottom: auto">{{ form.link.label(class="form-control-label") }}</p>
+                            <!-- displays form errors to user -->
+                            {% if form.link.errors %}
+                                {{ form.link(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.link.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.link(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="content-section", style="padding: 20px 10px">
+        <div class="container">
+          <h4>Alternative Clothing Options</h4>
+          <p style="font-size: 1.2rem">Look into these other options that would suit your needs:</p>
+          <div class="list-group", style="font-size: 1.1rem">
+            <a href="{{ url1 }}" class="list-group-item list-group-item-action list-group-item-success">Link 1: {{ url1 }}</a>
+            <a href="{{ url2 }}" class="list-group-item list-group-item-action">Link 2: {{ url2 }}</a>
+            <a href="{{ url3 }}" class="list-group-item list-group-item-action list-group-item-warning">Link 3: {{ url3 }}</a>
+          </div>
+        </div>
+    </div>
+{% endblock content %}
