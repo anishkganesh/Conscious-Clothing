@@ -25,6 +25,7 @@ def home():
         else:
             flash("Not The Best of Clothing to Add to Your Collection! " + "Carbon Unfriendliness: " + str(carbon_value) + "%",
                   'danger')
+        # Recommendation URLs
         url1 = 'https://www.amazon.com/Emporio-Armani-Eagle-V-Neck-White/dp/B06VVKC94N/ref=sr_1_30?dchild=1&keywords=' \
                'armani+shirts&qid=1604838927&sr=8-30'
         url2 = 'https://www.amazon.com/Armani-Exchange-Mens-Crew-Black/dp/B0775SPV13/ref=sr_1_6?dchild=1&keywords=' \
