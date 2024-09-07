@@ -2,7 +2,7 @@
 {% block content %}
     <div class="content-section">
         <form method="POST" action=""> <!-- action posts the information onto the same route we are currently on -->
-            {{ form.hidden_tag() }} <!-- adding a CSRF (cross site request forgery) token to protect our form against certain attacks -->
+            {{ form.hidden_tag() }} <!-- adding CSRF (cross site request forgery) token to protect our form against certain attacks -->
             <fieldset class="form-group">
                         <legend class="border-bottom mb-4">Current Clothing Link</legend>
                         <div class="form-group">
