@@ -1,7 +1,7 @@
 key_words = ['75%,', 'Cotton', '12%,', 'Silk', '13%', 'Wool']
 # placeholder list for the actual dataset.
 
-
+# Updated material coeffecients
 cotton = 0.75729839;
 polyester = 0.02721845;
 leather = 0.02308011;
